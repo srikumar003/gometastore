@@ -326,3 +326,7 @@ func (c *MetastoreClient) GetConfigValue(cname string, defVal string) (string, e
 func (c *MetastoreClient) GetSchema(dbName string, tableName string) ([]*hive_metastore.FieldSchema, error) {
 	return c.client.GetSchema(c.context, dbName, tableName)
 }
+
+func (C *MetastoreClient) GetMetaConf(cname string) (string, error) {
+	return c.client.GetMetaConf(c.context, cname)
+}
