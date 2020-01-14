@@ -327,6 +327,6 @@ func (c *MetastoreClient) GetSchema(dbName string, tableName string) ([]*hive_me
 	return c.client.GetSchema(c.context, dbName, tableName)
 }
 
-func (C *MetastoreClient) GetMetaConf(cname string) (string, error) {
+func (c *MetastoreClient) GetMetaConf(cname string) (string, error) {
 	return c.client.GetMetaConf(c.context, cname)
 }
