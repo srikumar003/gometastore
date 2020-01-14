@@ -318,3 +318,12 @@ func (c *MetastoreClient) GetTablesByType(dbName string,
 	table string, tableType string) ([]string, error) {
 	return c.client.GetTablesByType(c.context, dbName, table, tableType)
 }
+
+func (c *MetaStoreClient) GetConfigValue(cname string, defVal string) (cval string, error) {
+	return c.client.GetConfigValue(c.context, cname, defVal)
+}
+
+func (c *MetaStoreClient) GetSchema(dbName string, tableName string) ([]*hive_metastore.FieldSchema, error){
+	return c.client.GetSchema(c.context, dbName, tableName)
+}
+
